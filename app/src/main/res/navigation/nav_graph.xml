@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/productListFragment">
+
+    <fragment
+        android:id="@+id/addEditProductFragment"
+        android:name="com.example.secondchance.AddEditProductFragment"
+        android:label="AddEditProductFragment" >
+        <argument
+            android:name="product"
+            app:argType="com.example.secondchance.Product"
+            app:nullable="true" />
+        <action
+            android:id="@+id/action_addEditProductFragment_to_productListFragment"
+            app:destination="@id/productListFragment"
+            app:popUpTo="@id/productListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/productDetailFragment"
+        android:name="com.example.secondchance.ProductDetailFragment"
+        android:label="ProductDetailFragment" >
+        <argument
+            android:name="product"
+            app:argType="com.example.secondchance.Product" />
+        <action
+            android:id="@+id/action_productDetailFragment_to_productListFragment"
+            app:destination="@id/productListFragment"
+            app:enterAnim="@anim/from_left"
+            app:exitAnim="@anim/to_right"
+            app:popEnterAnim="@anim/from_right"
+            app:popExitAnim="@anim/to_left"
+            app:popUpTo="@id/productListFragment" />
+        <action
+            android:id="@+id/action_productDetailFragment_to_sellerDetailFragment"
+            app:destination="@id/sellerDetailFragment"
+            app:enterAnim="@anim/slide_in_down"
+            app:exitAnim="@anim/slide_out_down"
+            app:popEnterAnim="@anim/slide_out_down"
+            app:popExitAnim="@anim/slide_in_up"
+            app:popUpTo="@id/productDetailFragment" />
+
+
+    </fragment>
+    <fragment
+        android:id="@+id/productListFragment"
+        android:name="com.example.secondchance.ProductListFragment"
+        android:label="ProductListFragment" >
+        <action
+            android:id="@+id/action_productListFragment_to_addEditProductFragment"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right"
+            app:destination="@id/addEditProductFragment" />
+        <action
+            android:id="@+id/action_productListFragment_to_productDetailFragment"
+            app:destination="@id/productDetailFragment"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right"
+            app:popUpTo="@id/productListFragment" />
+
+        <action
+            android:id="@+id/action_productListFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/sellerDetailFragment"
+        android:name="com.example.secondchance.SellerDetailFragment"
+        android:label="Seller Details">
+        <argument
+            android:name="seller"
+            app:argType="com.example.secondchance.Seller" />
+        <argument
+            android:name="product"
+            app:argType="com.example.secondchance.Product" />
+        <action
+            android:id="@+id/action_sellerDetailFragment_to_productDetailFragment"
+            app:destination="@id/productDetailFragment"
+            app:enterAnim="@anim/slide_in_up"
+            app:exitAnim="@anim/slide_out_up"
+            app:popEnterAnim="@anim/slide_out_up"
+            app:popExitAnim="@anim/slide_in_down"
+            app:popUpTo="@id/productDetailFragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.example.secondchance.SettingsFragment"
+        android:label="SettingsFragment" >
+        <action
+            android:id="@+id/action_settingsFragment_to_productListFragment"
+            app:destination="@id/productListFragment"
+            app:popUpTo="@id/productListFragment" />
+    </fragment>
+    <activity
+        android:id="@+id/mainActivity"
+        android:name="com.example.secondchance.MainActivity"
+        android:label="activity_main"
+        tools:layout="@layout/activity_main" />
+</navigation>

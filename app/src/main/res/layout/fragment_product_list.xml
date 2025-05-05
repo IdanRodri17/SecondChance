@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundLight"
+    android:padding="16dp"
+    tools:context=".ProductListFragment">
+
+        <!-- לוגו -->
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/ivAppLogo"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/logo"
+            android:scaleType="centerCrop"
+            android:contentDescription="@string/app_logo"
+            app:shapeAppearanceOverlay="@style/ShapeAppearance.SecondChance.Rounded"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="25dp"
+            android:layout_marginStart="16dp"/>
+
+
+
+        <!-- כותרת -->
+        <TextView
+            android:id="@+id/title_product_list"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/second_Chance"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@color/greenPrimary"
+            android:gravity="center_vertical"
+            app:layout_constraintTop_toTopOf="@+id/ivAppLogo"
+            app:layout_constraintStart_toEndOf="@+id/ivAppLogo"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="20dp"/>
+
+
+        <!-- כפתור הוספה -->
+        <Button
+            android:id="@+id/addButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/go_to_add"
+            android:backgroundTint="@color/greenPrimary"
+            android:textColor="@color/white"
+            app:layout_constraintTop_toBottomOf="@+id/ivAppLogo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp" />
+
+        <!-- קו מפריד -->
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="#CCCCCC"
+            app:layout_constraintTop_toBottomOf="@+id/addButton"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"/>
+
+        <!-- RecyclerView -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvSellers"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:padding="8dp"
+            android:clipToPadding="false"
+            tools:listitem="@layout/item_product"
+            app:layout_constraintTop_toBottomOf="@+id/addButton"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

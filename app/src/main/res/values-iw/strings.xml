@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <string name="app_name">הזדמנות שנייה</string>
+    <string name="hello_blank_fragment">שלום פרגמנט ריק</string>
+
+    <!-- Navigation -->
+    <string name="back_to_list">חזרה לרשימה</string>
+    <string name="go_to_add">הוספת מוצר</string>
+    <string name="go_to_detail">עבור לפרטים</string>
+    <string name="go_to_settings">עבור להגדרות</string>
+
+    <!-- Titles -->
+    <string name="add_edit_product">הוספה / עריכת מוצר</string>
+    <string name="product_details">פרטי מוצר</string>
+
+    <!-- Product Fields -->
+    <string name="product_name">שם המוצר</string>
+    <string name="product_description">תיאור המוצר</string>
+    <string name="select_image">בחר תמונה</string>
+    <string name="save_product">שמור מוצר</string>
+    <string name="product">מוצר</string>
+    <string name="product_image">תמונת מוצר</string>
+    <string name="contact_seller">צור קשר עם המוכר</string>
+    <string name="shekel" translatable="false">₪</string>
+
+
+    <!-- Toasts & Dialogs -->
+    <string name="please_enter_a_product_name">יש להזין שם מוצר</string>
+    <string name="please_enter_a_valid_price">יש להזין מחיר תקין</string>
+    <string name="please_select_a_seller">יש לבחור מוכר</string>
+    <string name="product_saved_successfully">המוצר נשמר בהצלחה</string>
+    <string name="select_image_source">בחר מקור תמונה</string>
+    <string name="choose_from_gallery">בחר מהגלריה</string>
+    <string name="take_a_photo">צלם תמונה</string>
+    <string name="are_you_sure_you_want_to_delete_this_product">האם אתה בטוח שברצונך למחוק את המוצר?</string>
+    <string name="yes">כן</string>
+    <string name="no">לא</string>
+
+    <!-- UI -->
+    <string name="back">חזור</string>
+    <string name="price">מחיר</string>
+    <string name="name">שם:</string>
+    <string name="mobile_phone">מספר טלפון:</string>
+    <string name="address">כתובת:</string>
+    <string name="call_to_seller">התקשר למוכר</string>
+    <string name="seller_name">שם: %s</string>
+    <string name="seller_number">טלפון: %s</string>
+    <string name="tel_aviv">כתובת: %s</string>
+    <string name="seller_details">פרטי המוכר</string>
+    <string name="name_seller">שם המוכר:</string>
+    <string name="mobile_phone_seller">מספר המוכר:</string>
+    <string name="address_seller">כתובת המוכר:</string>
+    <string name="app_logo">לוגו</string>
+</resources>
